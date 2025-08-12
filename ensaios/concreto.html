@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LabTechGuide — Ensaio de Concreto</title>
+  <meta name="description" content="Procedimentos passo a passo para ensaios de laboratório (solo, concreto, agregados, betuminosos)." />
+  <!-- Tailwind Play CDN for quick editing without build step -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body class="bg-slate-900 text-slate-100">
+  <header class="bg-slate-800/60 backdrop-blur sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/assets/logo.svg" alt="LabTechGuide" class="h-10 w-10"/>
+        <span class="font-semibold text-lg">LabTechGuide</span>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="/ensaios/concreto.html" class="hover:text-teal-300">Ensaios</a>
+        <a href="/blog/index.html" class="hover:text-teal-300">Blog</a>
+        <a href="/sobre.html" class="hover:text-teal-300">Sobre</a>
+      </nav>
+      <button id="burger" class="md:hidden p-2" aria-label="Abrir menu">
+        <svg id="burgerOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="burgerClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden bg-slate-800/90">
+      <div class="flex flex-col p-3">
+        <a href="/ensaios/concreto.html" class="py-2 border-b border-slate-700">Ensaios</a>
+        <a href="/blog/index.html" class="py-2 border-b border-slate-700">Blog</a>
+        <a href="/sobre.html" class="py-2">Sobre</a>
+      </div>
+    </div>
+  </header>
+  <main>
+
+  <section class="container mx-auto px-4 py-12 content">
+    <h1 class="text-3xl font-bold">Ensaio de Resistência à Compressão do Concreto (Exemplo)</h1>
+    <p class="mt-4 text-slate-300"><strong>Objetivo:</strong> Determinar a resistência à compressão de corpos de prova cilíndricos de concreto usinado.</p>
+
+    <h2 class="mt-6 font-semibold">Normas e referências</h2>
+    <ul class="list-disc list-inside text-slate-300">
+      <li>ABNT NBR 5739 — Ensaio de compressão (exemplo, confirmar versão atual)</li>
+      <li>Manual do laboratório — procedimentos internos</li>
+    </ul>
+
+    <h2 class="mt-6 font-semibold">Equipamentos e materiais</h2>
+    <ul class="list-disc list-inside text-slate-300">
+      <li>Prensa de compressão calibrada</li>
+      <li>Cilindros de concreto curados (100×200 mm)</li>
+      <li>Calibrador (paquímetro), balança, cubas de cura</li>
+    </ul>
+
+    <h2 class="mt-6 font-semibold">Procedimento (resumido)</h2>
+    <ol class="list-decimal list-inside text-slate-300 space-y-3">
+      <li class="step"><strong>Preparação:</strong> Verifique identificação e cura do corpo-de-prova (28 dias, salvo especificação).</li>
+      <li class="step"><strong>Limpeza:</strong> Remova eventuais rebarbas e nivele as faces com cuidado.</li>
+      <li class="step"><strong>Posicionamento:</strong> Centralize o cilindro na mesa da prensa e alinhe corretamente.</li>
+      <li class="step"><strong>Aplicação da carga:</strong> Aplique carga axial uniformemente até a ruptura, registrando a carga máxima <em>F</em> (kN).</li>
+      <li class="step"><strong>Cálculo:</strong> Calcule a resistência <code>σ = F / A</code> onde <code>A</code> é a área da seção (mm²).</li>
+    </ol>
+
+    <h2 class="mt-6 font-semibold">Exemplo de cálculo</h2>
+    <p class="text-slate-300">Se <em>F</em> = 350 kN e o diâmetro do cilindro é 100 mm, então área A = π·(D/2)² = 7854 mm² → σ = 350000 N / 7854 mm² = 44,6 MPa.</p>
+
+    <h2 class="mt-6 font-semibold">Registro dos resultados</h2>
+    <p class="text-slate-300">Registre: identificação da amostra, idade, cura, carga máxima, resistência calculada e observações de ruptura.</p>
+
+    <div class="mt-8 text-slate-400 text-sm">Observação: Este procedimento é um exemplo. Consulte a norma aplicável e o responsável técnico do laboratório.</div>
+  </section>
+
+  </main>
+  <footer class="bg-slate-800/70 mt-12 border-t border-slate-700">
+    <div class="container mx-auto px-4 py-8 text-sm text-slate-300">
+      <div class="md:flex md:justify-between">
+        <div>
+          <strong>LabTechGuide</strong><br/>
+          Procedimentos técnicos para laboratórios de construção civil.
+        </div>
+        <div class="mt-4 md:mt-0">
+          Links úteis:<br/>
+          <a href="https://nextjs.org" class="underline">Next.js</a> • <a href="https://tailwindcss.com" class="underline">Tailwind CSS</a> • <a href="https://vercel.com" class="underline">Vercel</a>
+        </div>
+      </div>
+      <div class="mt-4 text-slate-400">Conteúdo de exemplo — edite e adapte para seu laboratório. Consulte normas e referências oficiais ao publicar.</div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>

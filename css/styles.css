@@ -1,0 +1,9 @@
+/* Custom styles for LabTechGuide (small) */
+:root{
+  --accent: #14b8a6;
+}
+.hero-anim { transform-origin: center; }
+.badge { background: linear-gradient(90deg, rgba(20,184,166,0.12), transparent); padding: 0.35rem 0.6rem; border-radius: 999px; color: var(--accent); font-weight:600; }
+.content { max-width: 900px; margin-left:auto; margin-right:auto; padding: 1rem; }
+.step { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.03); padding: 1rem; border-radius: 8px; }
+code { background: rgba(255,255,255,0.03); padding: 0.15rem 0.4rem; border-radius: 4px; }
